@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/validationform.html")
 public class ValidationController {
 
-	// Display the form on the get request
+	
 	@RequestMapping(method = RequestMethod.GET)
 	public String showValidatinForm(Map model) {
 		ValidationForm validationForm = new ValidationForm();
@@ -21,14 +21,14 @@ public class ValidationController {
 		return "validationform";
 	}
 
-	// Process the form.
+	
 	@RequestMapping(method = RequestMethod.POST)
 	public String processValidatinForm(@Valid ValidationForm validationForm,
 			BindingResult result, Map model) {
 		if (result.hasErrors()) {
 			return "validationform";
 		}
-		// Add the saved validationForm to the model
+		
 		model.put("validationForm", validationForm);
 		return "validationsuccess";
 	}

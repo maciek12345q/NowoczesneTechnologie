@@ -37,6 +37,8 @@
 			<property name="annotatedClasses">
 			<list>
 				  <value>org.program.model.Users</value> <!-- Entity classes-->
+				   <value>org.program.model.Book</value> <!-- Entity classes-->
+				    <value>org.program.model.Person</value> <!-- Entity classes-->
 			</list>
 			</property>
 

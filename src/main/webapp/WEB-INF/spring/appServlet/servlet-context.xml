@@ -35,6 +35,10 @@
 		<property name="basename" value="/WEB-INF/messages" />
 	</bean>
 	
+	<!-- Tutaj jest jest dodatkowe źródła danych -->
+	 <mvc:resources mapping="/resources/**" location="/resources/"/>
+	
+	
 	<!-- Configure the multipart resolver -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">      
     </bean>
