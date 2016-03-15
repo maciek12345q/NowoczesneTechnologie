@@ -32,7 +32,7 @@
 	
 		<div id="header">
 		
-			<img src="images/biblio.jpg" alt="" width="720" height="160" />
+			<img src="../images/biblio.jpg" alt="" width="720" height="160" />
 			
 		</div>
 		
@@ -45,7 +45,7 @@
 			
 			<hr />
 			
-			<a href="forms/helloworld.html" class="navigation">Ogólnie o bibliotece</a><a href="forms/simpleForm.html" class="navigation">Szukaj książki</a><a href="forms/validationform.html" class="navigation">Dodaj ksiazke</a><a href="forms/BookRegistration.html" class="navigation">Zaloguj się do biblioteki</a><a href="forms/registrationform.html" class="navigation">Rejestracja do biblioteki</a>
+			<a href="simpleForm.html" class="navigation">Search book's</a><a href="validationform.html" class="navigation">Add book</a><a href="BookRegistration.html" class="navigation">Sign in</a><a href="registrationform.html" class="navigation">Sign out</a><a href="SearchBook.html" class="navigation">Search book</a>
 		</div>
 		
 <br><br>

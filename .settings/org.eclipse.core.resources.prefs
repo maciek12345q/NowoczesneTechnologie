@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/BookRegistration.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/BookRegistrationSuccess.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/SearchBook.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/helloworld.jsp=UTF-8
 encoding//src/main/webapp/index.jsp=UTF-8

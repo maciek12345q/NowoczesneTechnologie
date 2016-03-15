@@ -34,46 +34,18 @@
 			
 			<hr />
 			
-			<a href="forms/helloworld.html" class="navigation">Ogólnie o bibliotece</a><a href="forms/simpleForm.html" class="navigation">Szukaj książki</a><a href="forms/validationform.html" class="navigation">Dodaj ksiazke</a><a href="forms/BookRegistration.html" class="navigation">Zaloguj się do biblioteki</a><a href="forms/registrationform.html" class="navigation">Rejestracja do biblioteki</a>
+			<a href="forms/simpleForm.html" class="navigation">Search book's</a><a href="forms/validationform.html" class="navigation">Add book</a><a href="forms/BookRegistration.html" class="navigation">Sign in</a><a href="forms/registrationform.html" class="navigation">Sign out</a><a href="forms/SearchBook.html" class="navigation">Search book</a>
 		</div>
 		
 <br><br>
 
-		<div id="content">
 		
-			<h1>Welcome</h1>
-			
-			
-    <p> <a href="#">Lorem ipsum</a> dolor sit amet, consectetur adipisicing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-      ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id 
-      est laborum. </p>
-			
-						<h1>Lorem ipsum</h1>
-			
-			
-    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-      consequat. Duis aute irure dolor in reprehenderit in <a href="#">voluptate</a> 
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id 
-      est laborum. </p>
-				
-    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-      consequat. <a href="#">Duis aute irure</a> dolor in reprehenderit in voluptate 
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id 
-      est laborum. </p>
-
-
-
-		</div>
+		
+				<div id="content">
+	<p>Welcome on the site about library in Rzeszow. You can add book to database or search some if you need to. </p>
+	
+</div>
+		
 	
 
 	

@@ -17,10 +17,7 @@ public class HelloWorldController {
 	   
 	   @RequestMapping("/helloworld")
 	   public ModelAndView helloWord(){
-		      String message = "Hello World, Spring 3.0!";
-		      
-		     
-		  
-		      return new ModelAndView("helloworld", "message",message);
+		    
+		      return new ModelAndView("helloworld");
 	   }
   }

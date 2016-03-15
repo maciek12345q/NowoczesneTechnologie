@@ -12,7 +12,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "users")
+@Table(name = "Users")
 @SuppressWarnings("serial")
 public class Users implements Serializable {
 
