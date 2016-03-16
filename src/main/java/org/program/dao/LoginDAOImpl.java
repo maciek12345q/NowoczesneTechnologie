@@ -43,6 +43,20 @@ public class LoginDAOImpl implements LoginDAO{
 			session.close();
 			return userFound;              
        }
+
+	public List<String> listOfAccount() {
+		
+		
+		Session session = sessionFactory.openSession();
+		boolean userFound = false;
+		String SQL_QUERY =" from Users";
+		Query query = session.createQuery(SQL_QUERY);
+		List list = query.list();
+		if(list.isEmpty())
+			return null;
+			else
+		return list;
+	}
        
      
 }

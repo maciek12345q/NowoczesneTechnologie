@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.program.form.BookRegistrationForm;
 import org.program.model.Book;
 import org.program.service.BookRegistrationService;
+import org.program.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +22,13 @@ public class RegistrationBookController {
 	
 	@Autowired
 	BookRegistrationService bookRegistrationService;
+	
+	@Autowired
+	LoginService loginService;
+
+	public void setLoginService(LoginService loginService) {
+		this.loginService = loginService;
+	}
 
 	public void setBookRegistrationService(BookRegistrationService bookRegistrationService) {
 		this.bookRegistrationService = bookRegistrationService;
@@ -35,9 +43,13 @@ public class RegistrationBookController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public String processForm(@ModelAttribute("bookRegistration")BookRegistrationForm bookRegistration, BindingResult result,
+	public String processForm(@ModelAttribute("bookRegistration")@Valid BookRegistrationForm bookRegistration, BindingResult result,
 			Map model) {
 		
+		
+		//Brak walidatora!
+		if(!result.hasErrors())
+		{
 		
 		Book book = new Book();
 		book.setAuthor(bookRegistration.getAuthor());
@@ -45,10 +57,13 @@ public class RegistrationBookController {
 		book.setNumberOfBook(bookRegistration.getNubmerOfBook());
 		book.setTitle(bookRegistration.getTitle());
 		book.setNsbn(bookRegistration.getNsbn());
+		book.setPerson(null);
 		
 	
 			this.bookRegistrationService.addBook(book);
 			return "BookRegistrationSuccess";
+		}
+		else return "BookRegistrationFailed";
 		
 		
 	}

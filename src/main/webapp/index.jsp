@@ -34,7 +34,7 @@
 			
 			<hr />
 			
-			<a href="forms/simpleForm.html" class="navigation">Search book's</a><a href="forms/validationform.html" class="navigation">Add book</a><a href="forms/BookRegistration.html" class="navigation">Sign in</a><a href="forms/registrationform.html" class="navigation">Sign out</a><a href="forms/SearchBook.html" class="navigation">Search book</a>
+<a href="forms/BookRegistration.html" class="navigation">Add book</a><a href="forms/registrationform.html" class="navigation">Registration Account</a><a href="forms/SearchBook.html" class="navigation">Search book</a>
 		</div>
 		
 <br><br>

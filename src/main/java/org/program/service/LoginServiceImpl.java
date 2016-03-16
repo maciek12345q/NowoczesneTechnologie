@@ -1,5 +1,7 @@
 package org.program.service;
-import org.program.dao.*;
+import java.util.List;
+
+import org.program.dao.LoginDAO;
 /*
 @Author: Deepak Kumar
 Check more tutorials at http://www.roseindia.net
@@ -21,5 +23,10 @@ public class LoginServiceImpl implements LoginService {
        public boolean checkLogin(String userName, String userPassword){
               System.out.println("In Service class...Check Login");
               return loginDAO.checkLogin(userName, userPassword);
+       }
+       
+       public List<String> listOfAccount()
+       {
+    	   return this.loginDAO.listOfAccount();
        }
 }

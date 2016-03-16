@@ -1,6 +1,8 @@
 package org.program.service;
-import org.program.model.*;
+import java.util.List;
 
 public interface LoginService{    
        public boolean checkLogin(String userName, String userPassword);
+       
+       public List<String> listOfAccount();
 }

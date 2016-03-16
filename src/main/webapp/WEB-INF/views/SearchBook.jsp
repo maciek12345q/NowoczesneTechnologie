@@ -45,15 +45,15 @@
 			
 			<hr />
 			
-			<a href="simpleForm.html" class="navigation">Search book's</a><a href="validationform.html" class="navigation">Add book</a><a href="BookRegistration.html" class="navigation">Sign in</a><a href="registrationform.html" class="navigation">Sign out</a><a href="SearchBook.html" class="navigation">Search book</a>
+		<a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
 		</div>
 		
 <br><br>
 
 		<div id="content">
 		
-			<h1>Dodawanie nowej ksiazki</h1>
-			<p>Prosze skorzystac z ponizszego formularza aby dodac interesujaco pozycje do ksiegozbioru</p>
+			<h1>Szukanie ksiazki</h1>
+			<p>Prosze skorzystac z ponizszego formularza aby znalesc interesujaco cie pozycje.</p>
 			
 			
      <form:form class="form-inline"  method="post" action="SearchBook.html" role="form" commandName="searchBook">
@@ -72,7 +72,11 @@
 				path="author" /></FONT></td>
 		</tr>
 		<tr>
-			<td><label for="email">Autor :</label><form:input cssClass="form-control" path="author" /></td>
+			<td><label for="author">Autor :</label><form:input cssClass="form-control" path="author" /></td>
+		</tr>
+		
+		<tr>
+			<td><input cssClass="btn btn-default" type="submit" value="Szukaj ksiazki" /></td>
 		</tr>
 
 		

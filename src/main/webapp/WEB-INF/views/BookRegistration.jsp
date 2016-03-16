@@ -45,7 +45,7 @@
 			
 			<hr />
 			
-			<a href="simpleForm.html" class="navigation">Search book's</a><a href="validationform.html" class="navigation">Add book</a><a href="BookRegistration.html" class="navigation">Sign in</a><a href="registrationform.html" class="navigation">Sign out</a><a href="SearchBook.html" class="navigation">Search book</a>
+			<a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
 		</div>
 		
 <br><br>
@@ -59,6 +59,7 @@
      <form:form class="form-inline"  method="post" action="BookRegistration.html" role="form" commandName="bookRegistration">
   <div class="form-group">
    <table>
+   
 		<tr>
 			<td><FONT color="red"><form:errors
 				path="title" /></FONT></td>
@@ -72,7 +73,7 @@
 				path="author" /></FONT></td>
 		</tr>
 		<tr>
-			<td><label for="email">Autor :</label><form:input cssClass="form-control" path="author" /></td>
+			<td><label for="author">Autor :</label><form:input cssClass="form-control" path="author" /></td>
 		</tr>
 
 		<tr>
@@ -80,7 +81,7 @@
 				path="nubmerOfBook" /></FONT></td>
 		</tr>
 		<tr>
-			<td><label for="email">Liczba ksiazek:</label><form:input cssClass="form-control" path="nubmerOfBook" /></td>
+			<td><label for="nubmerOfBook">Liczba ksiazek:</label><form:input cssClass="form-control" path="nubmerOfBook" /></td>
 		</tr>
 
 		<tr>
@@ -97,7 +98,7 @@
 		</tr>
 		
 		<tr>
-			<td><label  for="email">Kategoria:</label><form:input cssClass="form-control" path="category" /></td>
+			<td><label  for="category">Kategoria:</label><form:input cssClass="form-control" path="category" /></td>
 		</tr>
 		<tr>
 			<td><input cssClass="btn btn-default" type="submit" value="Dodaj ksiazke" /></td>

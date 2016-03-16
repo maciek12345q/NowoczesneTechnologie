@@ -51,8 +51,12 @@
 <br><br>
 
 		<div id="content">
-	<p>Welcome on the site about library in Rzeszow. You can add book to database or search some if you need to. </p>
-	
+		
+<div class="alert alert-danger">
+  <strong>Error</strong>We have a problem during binding this information from form.
+</div>
+			
+     
 </div>
 
 	
@@ -60,7 +64,7 @@
 
 			<hr />
 
-	Copyright Â© 2016 Maciej Grzesiuk | All Rights Reserved
+	Copyright © 2016 Maciej Grzesiuk | All Rights Reserved
 
 		</div>
 </div>

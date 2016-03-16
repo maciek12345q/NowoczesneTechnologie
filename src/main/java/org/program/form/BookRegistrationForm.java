@@ -3,6 +3,7 @@ package org.program.form;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.program.model.Users;
 
 public class BookRegistrationForm {
 	
@@ -21,6 +22,7 @@ public class BookRegistrationForm {
 	private String category;
 	@NotEmpty
 	private int nubmerOfBook;
+	
 	
 	
 	public String getTitle() {
