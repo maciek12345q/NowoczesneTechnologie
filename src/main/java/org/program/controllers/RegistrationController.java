@@ -1,11 +1,18 @@
 package org.program.controllers;
 
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import javax.validation.Valid;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import org.program.form.Registration;
-import org.program.service.LoginService;
+import org.program.model.Book;
+import org.program.model.Person;
+import org.program.model.Users;
 import org.program.service.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -53,7 +60,8 @@ public class RegistrationController {
 		else
 		{
 			
-			registrationService.registrateAccount("ASD", "ASD");
+		
+			
 			
 			
 		return "registrationsuccess";

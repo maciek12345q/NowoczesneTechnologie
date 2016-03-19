@@ -45,7 +45,7 @@
 			
 			<hr />
 			
-			<a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
+			<a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="loginform.html" class="navigation">Login Form</a><a href="SearchBook.html" class="navigation">Search book</a>
 		</div>
 		
 <br><br>

@@ -45,7 +45,7 @@
 			
 			<hr />
 			
-			<a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
+			<a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="loginform.html" class="navigation">Login Form</a><a href="SearchBook.html" class="navigation">Search book</a>
 		</div>
 		
 <br><br>
@@ -78,10 +78,10 @@
 
 		<tr>
 			<td><FONT color="red"><form:errors
-				path="nubmerOfBook" /></FONT></td>
+				path="numberOfBook" /></FONT></td>
 		</tr>
 		<tr>
-			<td><label for="nubmerOfBook">Liczba ksiazek:</label><form:input cssClass="form-control" path="nubmerOfBook" /></td>
+			<td><label for="numberOfBook">Liczba ksiazek:</label><form:input cssClass="form-control" path="numberOfBook" /></td>
 		</tr>
 
 		<tr>

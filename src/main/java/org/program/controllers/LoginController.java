@@ -46,6 +46,8 @@ public class LoginController {
 			return "loginform";
 		}
 		*/
+		
+		
 		boolean userExists = loginService.checkLogin(loginForm.getUserName(),loginForm.getPassword());
 		if(userExists){
 			model.put("loginForm", loginForm);

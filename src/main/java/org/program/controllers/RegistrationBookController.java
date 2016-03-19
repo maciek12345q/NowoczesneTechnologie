@@ -25,9 +25,16 @@ public class RegistrationBookController {
 	
 	@Autowired
 	LoginService loginService;
+	
+	@Autowired
+	BookRegistrationValidation bookRegistrationValidation;
 
 	public void setLoginService(LoginService loginService) {
 		this.loginService = loginService;
+	}
+
+	public void setBookRegistrationValidation(BookRegistrationValidation bookRegistrationValidation) {
+		this.bookRegistrationValidation = bookRegistrationValidation;
 	}
 
 	public void setBookRegistrationService(BookRegistrationService bookRegistrationService) {
@@ -46,15 +53,15 @@ public class RegistrationBookController {
 	public String processForm(@ModelAttribute("bookRegistration")@Valid BookRegistrationForm bookRegistration, BindingResult result,
 			Map model) {
 		
+		this.bookRegistrationValidation.validate(bookRegistration, result);
 		
-		//Brak walidatora!
 		if(!result.hasErrors())
 		{
 		
 		Book book = new Book();
 		book.setAuthor(bookRegistration.getAuthor());
 		book.setCategory(bookRegistration.getCategory());
-		book.setNumberOfBook(bookRegistration.getNubmerOfBook());
+		book.setNumberOfBook(bookRegistration.getNumberOfBook());
 		book.setTitle(bookRegistration.getTitle());
 		book.setNsbn(bookRegistration.getNsbn());
 		book.setPerson(null);

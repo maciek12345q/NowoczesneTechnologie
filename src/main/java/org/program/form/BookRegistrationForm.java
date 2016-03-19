@@ -1,9 +1,9 @@
 package org.program.form;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
-import org.program.model.Users;
 
 public class BookRegistrationForm {
 	
@@ -20,8 +20,8 @@ public class BookRegistrationForm {
 	@NotEmpty
 	@Size(min=1,max=50)
 	private String category;
-	@NotEmpty
-	private int nubmerOfBook;
+	@NotNull
+	private Integer numberOfBook;
 	
 	
 	
@@ -49,12 +49,14 @@ public class BookRegistrationForm {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public int getNubmerOfBook() {
-		return nubmerOfBook;
+	public Integer getNumberOfBook() {
+		return numberOfBook;
 	}
-	public void setNubmerOfBook(int nubmerOfBook) {
-		this.nubmerOfBook = nubmerOfBook;
+	public void setNumberOfBook(Integer numberOfBook) {
+		this.numberOfBook = numberOfBook;
 	}
+
+
 	
 
 }

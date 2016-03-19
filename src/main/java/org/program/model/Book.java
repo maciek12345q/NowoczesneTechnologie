@@ -1,5 +1,7 @@
 package org.program.model;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -30,21 +32,23 @@ public class Book {
 	private String category;
 	
 	@Column(name="numberOfBook")
-	private int numberOfBook;
+	private Integer numberOfBook;
 	
 	@Column(name="nsbn")
 	private String nsbn;
 	
 	@Column(name="id_person")
 	@OneToMany(mappedBy="book")
-	private Set<Person> person;
+	private Collection<Person> person = new ArrayList<Person>();
 	
 
-	public Set<Person> getPerson() {
+
+
+	public Collection<Person> getPerson() {
 		return person;
 	}
 
-	public void setPerson(Set<Person> person) {
+	public void setPerson(Collection<Person> person) {
 		this.person = person;
 	}
 
@@ -80,11 +84,12 @@ public class Book {
 		this.category = category;
 	}
 
-	public int getNumberOfBook() {
+
+	public Integer getNumberOfBook() {
 		return numberOfBook;
 	}
 
-	public void setNumberOfBook(int numberOfBook) {
+	public void setNumberOfBook(Integer numberOfBook) {
 		this.numberOfBook = numberOfBook;
 	}
 

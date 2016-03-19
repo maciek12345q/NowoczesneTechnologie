@@ -19,6 +19,8 @@ public class BookRegistrationValidation {
 			ValidationUtils.rejectIfEmpty(errors, "author", "Pole autor nie moze byc puste");
 			ValidationUtils.rejectIfEmpty(errors, "category", "Pole kategoria nie moze byc pusta");
 			ValidationUtils.rejectIfEmpty(errors, "nsbn", "Pole nsbn nie moze byc puste");
+			ValidationUtils.rejectIfEmpty(errors, "numberOfBook", "Pole Liczba ksiazek nie moze byc pusta ");
+		
 			
 			
 		
