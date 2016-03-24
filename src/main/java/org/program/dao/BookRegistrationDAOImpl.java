@@ -32,24 +32,12 @@ public class BookRegistrationDAOImpl implements BookRegistrationDAO {
 		Transaction tx = null;
 		try
 		{
-			/*System.out.println(book.getAuthor());
-			System.out.println(book.getCategory());
-			System.out.println(book.getNsbn());
-			System.out.println(book.getNumberOfBook());
-			System.out.println(book.getTitle());*/
+	
 			Person person = new Person();
 			person.setAdress("Borowa 10");
 			person.setLastName("Nowak");
 			person.setName("Maciej");
 			person.setPostCode("24-212");
-			Book book2 = new Book();
-			book2.setAuthor("Tolkine");
-			book2.setNsbn("232");
-			book2.setCategory("sadsad");
-			Users user = new Users();
-			user.setUserName("Maciek");
-			user.setUserPassword("asss");
-			user.setPerson(person);
 			Set<Person> persons = new HashSet<Person>();
 			persons.add(person);
 			book.setPerson(persons);
@@ -57,8 +45,7 @@ public class BookRegistrationDAOImpl implements BookRegistrationDAO {
 			tx	= session.beginTransaction();
 			 session.save(book);
 			 session.getTransaction().commit();
-			 session.close();
-			 sessionFactory.close();
+		
 		}
 		catch(HibernateException ex)
 		{
