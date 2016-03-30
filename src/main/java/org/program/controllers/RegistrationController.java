@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/registrationform.html")
+@RequestMapping("forms/registrationform.html")
 public class RegistrationController {
 	@Autowired
 	private RegistrationValidation registrationValidation;

@@ -1,5 +1,6 @@
 package org.program.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -39,6 +40,8 @@ public class SearchBookDAOImpl implements SearchBookDAO{
 			Criteria cr2 = session.createCriteria(Book.class);
 			cr2.add(Restrictions.eq("author", author));
 			 result2 = cr2.list();
+			 result=cr.list();
+	
 			tx.commit();
 		} catch(HibernateException e)
 		{
@@ -48,11 +51,51 @@ public class SearchBookDAOImpl implements SearchBookDAO{
 		{
 		session.close();
 		}
-		result.add(result2);
-		if(result.isEmpty())
-			return null;
-		else
-		return result;
+		List <Book>books = new ArrayList();
+	
+		int minim = Math.min(result.size(), result2.size());
+		int maxim = Math.max(result.size(), result2.size());
+		if(result.size()==0)
+		{
+			if(result2.size()==0)
+				return null;
+			else return result2;
+			
+			
+		}
+		else if(result.size()!=0)
+		{
+			if(result2.size()==0)
+				return result;
+			else
+			{
+				
+				
+				for(int i=0;i<minim;i++)
+				{
+					for(int j=0;j<maxim;j++)
+					{
+						if(minim==result.size())
+						{
+					if(result.get(i)==result2.get(j))
+						books.add((Book) result.get(i));
+						}
+						else
+						{
+							if(result.get(j)==result2.get(i))
+								books.add((Book)result.get(j));
+							
+						}
+					}
+				}
+				
+				
+				
+			}
+		}
+		return books;
+		
+		
 	}
 	
 	

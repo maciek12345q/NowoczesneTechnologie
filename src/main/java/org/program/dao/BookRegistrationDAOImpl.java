@@ -33,14 +33,9 @@ public class BookRegistrationDAOImpl implements BookRegistrationDAO {
 		try
 		{
 	
-			Person person = new Person();
-			person.setAdress("Borowa 10");
-			person.setLastName("Nowak");
-			person.setName("Maciej");
-			person.setPostCode("24-212");
-			Set<Person> persons = new HashSet<Person>();
-			persons.add(person);
-			book.setPerson(persons);
+			
+			
+			book.setPerson(null);
 			 
 			tx	= session.beginTransaction();
 			 session.save(book);

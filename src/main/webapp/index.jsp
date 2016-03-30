@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+ <link href="<c:url value="/resources/bootstrap.min.css" />" rel="stylesheet">
  <link href="<c:url value="/resources/css.css" />" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Spring 4, MVC Examples</title>
@@ -26,23 +28,22 @@
 		</div>
 		
 
-	
-		<div id="navigation">
 
-			
-			main menu
-			
-			<hr />
-			
-<a href="forms/BookRegistration.html" class="navigation">Add book</a><a href="forms/registrationform.html" class="navigation">Registration Account</a><a href="forms/loginform.html" class="navigation">Login Form</a><a href="forms/SearchBook.html" class="navigation">Search book</a>
-		</div>
-		
-<br><br>
 
 		
 		
 				<div id="content">
-	<p>Welcome on the site about library in Rzeszow. You can add book to database or search some if you need to. </p>
+				
+			<form:form action="loginform.html" method="GET" >
+	<table>
+	
+		<tr>
+			<td><input class="btn btn-primary btn-lg" type="submit" value="Zaloguj sie" /></td><td>&nbsp;&nbsp;&nbsp;</td><td><input class="btn btn-primary btn-lg" type="submit" value="Zarejestruj sie" /></td>
+		</tr>
+		
+		
+	</table>
+</form:form>
 	
 </div>
 		

@@ -78,11 +78,36 @@
 		<tr>
 			<td><input cssClass="btn btn-default" type="submit" value="Szukaj ksiazki" /></td>
 		</tr>
-
 		
 	</table>
 	</div>
 </form:form>
+
+		 <table class="table table-bordered">
+		  <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>nsbn</th>
+        <th>nubmer of book</th>
+        <th>User</th>
+      </tr>
+    </thead>
+    <tbody>
+	<c:forEach var="list" items="${lists}" varStatus="status">
+	<tr>
+    <td><c:out value="${list.title}"/></td>
+    <td><c:out value="${list.author}"/></td>
+    <td><c:out value="${list.nsbn}"/></td>
+    <td><c:out value="${list.numberOfBook}"/></td>
+    <td><c:choose><c:when test="not empty list.person">
+    <c:out value="${list.person.name}"/>&&nsbn;<c:out value="${list.person.lastname}"/>
+    </c:when><c:otherwise><c:out value="None"/></c:otherwise>
+    </c:choose>
+    </tr>
+    </c:forEach>
+	</tbody>
+	</table>
 </div>
 
 	

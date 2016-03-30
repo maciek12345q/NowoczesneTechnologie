@@ -1,19 +1,20 @@
 package org.program.controllers;
 
-import java.util.Map;
+import java.util.List;
 
 import org.program.form.SearchBookForm;
 import org.program.service.SearchBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/SearchBook.html")
+@RequestMapping("forms/SearchBook.html")
 public class SearchBookController {
 	
 	@Autowired
@@ -41,10 +42,12 @@ public class SearchBookController {
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public String processForm(@ModelAttribute("searchBook")SearchBookForm searchBookForm, BindingResult result,
-			Map model) 
+			ModelMap model) 
 	{
 		
+		List list = this.searchBookService.searchBook(searchBookForm.getTitle(), searchBookForm.getAuthor());
 		
+		model.addAttribute("lists",list); 
 		return "SearchBook";
 		
 	}
