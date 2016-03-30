@@ -34,7 +34,7 @@
 		
 				<div id="content">
 				
-			<form:form action="loginform.html" method="GET" >
+			<form:form action="login" method="GET" >
 	<table>
 	
 		<tr>
