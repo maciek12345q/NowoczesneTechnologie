@@ -33,17 +33,35 @@
 		
 		
 				<div id="content">
-				
+				<table>
+				<tr>
+				<td>
 			<form:form action="login" method="GET" >
 	<table>
 	
-		<tr>
-			<td><input class="btn btn-primary btn-lg" type="submit" value="Zaloguj sie" /></td><td>&nbsp;&nbsp;&nbsp;</td><td><input class="btn btn-primary btn-lg" type="submit" value="Zarejestruj sie" /></td>
-		</tr>
+		
+			<input class="btn btn-primary btn-lg" type="submit" value="Zaloguj sie" />
+	
 		
 		
 	</table>
 </form:form>
+</td>
+<td>
+
+			<form:form action="forms/registrationform.html" method="GET" >
+	
+	
+		
+			<input class="btn btn-primary btn-lg" type="submit" value="Zarejestruj sie" />
+		
+</form:form>
+</td>
+</tr>
+</table>
+
+
+
 	
 </div>
 		
@@ -54,7 +72,7 @@
 
 			<hr />
 
-	Copyright © 2016 Maciej Grzesiuk | All Rights Reserved
+		Copyright &copy; 2016 Maciej Grzesiuk | All Rights Reserved
 
 		</div>
 </div>

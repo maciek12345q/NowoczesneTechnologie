@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -45,25 +46,22 @@
 			
 			<hr />
 			
-		<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
+			<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
 
 		</div>
 		
 <br><br>
 
-		<div id="content">	
+		<div id="content">
 		
-		<h3>Welcome Registration Successfully.</h3>
-   <table>
-	<tr>
-		<td>User Name :</td>
-		<td><core:out value="${registration.userName}" /></td>
-	</tr>
-	<tr>
-		<td>Password :</td>
-		<td><core:out value="${registration.password}" /></td>
-	</tr>
-</table>
+			<div class="alert alert-success">
+  <strong>Success!</strong> Book is successfully deleted !
+</div>
+			
+			
+     
+</div>
+
 	
 		<div id="footer">
 
@@ -75,5 +73,3 @@
 </div>
 </body>
 </html>
-
-

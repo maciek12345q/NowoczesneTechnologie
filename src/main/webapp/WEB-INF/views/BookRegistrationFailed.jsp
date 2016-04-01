@@ -46,7 +46,8 @@
 			
 			<hr />
 			
-			<a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="loginform.html" class="navigation">Login Form</a><a href="SearchBook.html" class="navigation">Search book</a>
+			<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
+
 		</div>
 		
 <br><br>
@@ -65,7 +66,7 @@
 
 			<hr />
 
-	Copyright © 2016 Maciej Grzesiuk | All Rights Reserved
+		Copyright &copy; 2016 Maciej Grzesiuk | All Rights Reserved
 
 		</div>
 </div>

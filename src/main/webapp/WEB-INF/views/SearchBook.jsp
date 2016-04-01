@@ -46,7 +46,8 @@
 			
 			<hr />
 			
-		<a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="loginform.html" class="navigation">Login Form</a><a href="SearchBook.html" class="navigation">Search book</a>
+		<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
+
 		</div>
 		
 <br><br>
@@ -91,7 +92,7 @@
         <th>Author</th>
         <th>nsbn</th>
         <th>nubmer of book</th>
-        <th>User</th>
+        <th>Buy</th>
       </tr>
     </thead>
     <tbody>
@@ -101,10 +102,7 @@
     <td><c:out value="${list.author}"/></td>
     <td><c:out value="${list.nsbn}"/></td>
     <td><c:out value="${list.numberOfBook}"/></td>
-    <td><c:choose><c:when test="not empty list.person">
-    <c:out value="${list.person.name}"/>&&nsbn;<c:out value="${list.person.lastname}"/>
-    </c:when><c:otherwise><c:out value="None"/></c:otherwise>
-    </c:choose>
+    <td> <form:form action="BuyBook.html?id=${list.id}" method="POST"><input type="submit" value="Buy it"/></form:form></td>
     </tr>
     </c:forEach>
 	</tbody>
@@ -116,7 +114,7 @@
 
 			<hr />
 
-	Copyright © 2016 Maciej Grzesiuk | All Rights Reserved
+		Copyright &copy; 2016 Maciej Grzesiuk | All Rights Reserved
 
 		</div>
 </div>

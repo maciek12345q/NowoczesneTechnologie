@@ -25,6 +25,7 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 		Users users = new Users();
 		users.setUserName(username);
 		users.setUserPassword(password);
+		users.setPerson(null);
 		Session session = this.sessionFactory.openSession();
 		try
 		{

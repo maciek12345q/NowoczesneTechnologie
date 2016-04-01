@@ -1,20 +1,22 @@
 package org.program.controllers;
 
-import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping("forms/helloworld.html")
 public class HelloWorldController {
 	   
 	   
-	   private SessionFactory sessionFactory;
 	   
-	   
-	   @RequestMapping("/helloworld")
+	   @RequestMapping(method=RequestMethod.GET)
 	   public ModelAndView helloWord(){
 		    
-		      return new ModelAndView("helloworld");
+		   ModelAndView model = new ModelAndView("helloworld");
+			
+
+			return model;
 	   }
   }
