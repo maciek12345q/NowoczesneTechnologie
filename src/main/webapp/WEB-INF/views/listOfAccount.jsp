@@ -46,7 +46,7 @@
 			
 			<hr />
 			
-			<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="sendEmail.html" class="navigation">SendEmail</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
+		<a href="helloworld.html" class="navigation">Main Information</a><a href="listOfAccount.html" class="navigation">List of Account</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="sendEmail.html" class="navigation">SendEmail</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a><a href="sendEmail.html" class="navigation" >Send Emails</a> 
 
 		</div>
 		
@@ -54,12 +54,40 @@
 
 		<div id="content">
 		
-			<div class="alert alert-success">
-  <strong>Success!</strong> Your book is successfully registrated.
-</div>
+			<h1>Szukanie ksiazki</h1>
+			<p>Prosze skorzystac z ponizszego formularza aby znalesc interesujaco cie pozycje.</p>
 			
 			
-     
+     <form:form class="form-inline"  method="post" action="listOfAccount.html" role="form" commandName="listOfAccount">
+  <div class="form-group">
+   <table>
+	
+		<tr>
+			<td><input cssClass="btn btn-default" type="submit" value="Pokaz uzytkownikow" /></td>
+		</tr>
+		
+	</table>
+	</div>
+</form:form>
+
+		 <table class="table table-bordered">
+		  <thead>
+      <tr>
+        <th>userName</th>
+        <th>userPassword</th>
+        <th>Type of user</th>
+      </tr>
+    </thead>
+    <tbody>
+	<c:forEach var="list" items="${lists}" varStatus="status">
+	<tr>
+    <td><c:out value="${list.userName}"/></td>
+    <td><c:out value="${list.userPassword}"/></td>
+    <td><c:out value="${list.typeOfUser}"/></td>
+    </tr>
+    </c:forEach>
+	</tbody>
+	</table>
 </div>
 
 	

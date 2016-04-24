@@ -61,7 +61,7 @@ public class RegistrationController {
 		{
 			
 		
-			this.registrationService.registrateAccount(registration.getUserName(),registration.getPassword());
+			this.registrationService.registrateAccount(registration.getUserName(),registration.getPassword(),registration.getRole());
 			
 			
 		return "registrationsuccess";

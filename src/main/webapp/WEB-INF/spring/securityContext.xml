@@ -7,12 +7,14 @@
 	http://www.springframework.org/schema/security/spring-security-4.0.xsd">
 
 
-   <http use-expressions="true" disable-url-rewriting="true">
-    <intercept-url pattern="/forms**" access="hasRole('ROLE_ADMIN')"/>
-     <intercept-url pattern="/resources**" access="permitAll"/>
-     <intercept-url pattern="/images**" access="permitAll"/>
-          <intercept-url pattern="/login**" access="permitAll" />
-    <intercept-url pattern="/" access="permitlAll"/>
+   <http auto-config="true">
+   <access-denied-handler error-page="/403" />
+   <intercept-url pattern="/" access="permitAll" />
+   <intercept-url pattern="/resources**" access="permitAll"/>
+   <intercept-url pattern="/images**" access="permitAll"/>
+   <intercept-url pattern="/forms/registrationform.html" access="permitAll"/>
+   <intercept-url pattern="/forms/**" access="hasRole('ADMIN') or hasRole('USER')"/>
+   
 
      <form-login 
 		    login-page="/login" 
@@ -26,12 +28,9 @@
 
 
 <authentication-manager >
-        <authentication-provider>
-            <user-service>
-                <user name="admin"  password="admin"  authorities="ROLE_ADMIN" />
-                <user name="user"  password="user"  authorities="ROLE_USER" />
-            </user-service>
-        </authentication-provider>
+        <authentication-provider user-service-ref="customUserDetailsService">
+	            <password-encoder hash="plaintext">
+	        </password-encoder></authentication-provider>
     </authentication-manager>
 
 </beans:beans>

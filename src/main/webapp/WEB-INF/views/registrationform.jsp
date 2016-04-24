@@ -36,7 +36,7 @@
 			
 		</div>
 		
-
+<div style="text-align:right;margin-right:80px;"><a href="<c:url value="/logout" />">Wyloguj sie</a></div>
 	
 		<div id="navigation">
 
@@ -45,7 +45,7 @@
 			
 			<hr />
 			
-			<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
+			<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="sendEmail.html" class="navigation">SendEmail</a><a href="SearchBook.html" class="navigation">Search book</a>
 
 		</div>
 		
@@ -91,6 +91,18 @@
 		<tr>
 			<td><form:input path="email" cssClass="form-control" /></td>
 		</tr>
+		
+		
+		
+		<tr>
+			<td>Funkcja(administrator itp.):<FONT color="red"><form:errors path="role" /></FONT></td>
+		</tr>
+		<tr>
+			<td><form:input path="role" cssClass="form-control" /></td>
+		</tr>
+		
+		
+		
 		<tr>
 			<td><input type="submit" value="Submit" cssClass="btn btn-default" /></td>
 		</tr>

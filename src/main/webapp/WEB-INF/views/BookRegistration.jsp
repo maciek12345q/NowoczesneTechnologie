@@ -36,7 +36,7 @@
 			<img src="../images/biblio.jpg" alt="" width="720" height="160" />
 			
 		</div>
-		
+		<div style="text-align:right;margin-right:80px;"><a href="<c:url value="/logout" />">Wyloguj sie</a></div>
 
 	
 		<div id="navigation">
@@ -46,7 +46,7 @@
 			
 			<hr />
 			
-			<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
+			</a><a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="sendEmail.html" class="navigation">SendEmail</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
 		</div>
 		
 <br><br>

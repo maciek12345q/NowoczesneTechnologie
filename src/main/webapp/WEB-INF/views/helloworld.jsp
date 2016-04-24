@@ -38,7 +38,8 @@
 		</div>
 		
 
-	
+	<div style="text-align:right;margin-right:80px;"><a href="<c:url value="/logout" />">Wyloguj sie</a></div>
+		
 		<div id="navigation">
 
 			
@@ -46,12 +47,12 @@
 			
 			<hr />
 			
-			<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
+			<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="sendEmail.html" class="navigation">SendEmail</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
 
 		</div>
 		
 <br><br>
-
+ 
 		<div id="content">
 	<p>Welcome on the site about bookstore in Rzeszow. You can add book to database or search some if you need to.Of course you can buy something </p>
 	

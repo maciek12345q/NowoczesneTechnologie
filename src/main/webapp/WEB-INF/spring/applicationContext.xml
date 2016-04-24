@@ -19,6 +19,15 @@
             <property name="username" value="konto" />
             <property name="password" value="konto" />
       </bean>
+      
+      <bean id="UsersDAO" class="org.program.dao.UsersDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+      
+      <bean id="customUserDetailsService" 
+                class="org.program.service.CustomUserDetailsService">
+		<property name="usersDAO" ref="UsersDAO" />
+	</bean>
 
       <!-- Configure Hibernate 4 Session Facotry -->
       <bean id="sessionFactory"
@@ -32,6 +41,8 @@
 			  <props>
 					<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 					<prop key="hibernate.show_sql">true</prop>
+					 <prop key="hibernate.hbm2ddl.auto">create</prop>
+				
 			  </props>
 			</property>
 			<property name="annotatedClasses">
@@ -39,10 +50,26 @@
 				  <value>org.program.model.Users</value> <!-- Entity classes-->
 				   <value>org.program.model.Book</value> <!-- Entity classes-->
 				    <value>org.program.model.Person</value> <!-- Entity classes-->
+				        <value>org.program.model.Role</value> <!-- Entity classes-->
 			</list>
 			</property>
 
       </bean>
+      
+      
+          <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com" />
+        <property name="port" value="587" />
+        <property name="username" value="maciusiasty" />
+        <property name="password" value="tico123123q" />
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+            </props>
+        </property>
+    </bean>
       
       
 

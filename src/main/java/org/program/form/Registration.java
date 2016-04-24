@@ -14,6 +14,17 @@ public class Registration {
 	@NotEmpty
 	@Email
 	private String email;
+	@NotEmpty
+	private String role;
+
+	
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public void setUserName(String userName) {
 		this.userName = userName;

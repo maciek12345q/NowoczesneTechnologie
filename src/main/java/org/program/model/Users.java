@@ -8,6 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -19,7 +20,7 @@ public class Users implements Serializable {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "id_users", length = 11 )
+	@Column(name = "users_id", length = 11 )
 	private Long id;
 	
 	@Column(name = "user_name")
@@ -31,8 +32,22 @@ public class Users implements Serializable {
 	@OneToOne(fetch=FetchType.LAZY,mappedBy="users")
 	private Person person;
 
+	
+	 @ManyToOne(fetch=FetchType.LAZY)
+	 @JoinColumn(name="id_role")
+	    private Role role;
 
 	
+	public Role getRole() {
+		return role;
+	}
+
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+
 	public Person getPerson() {
 		return person;
 	}

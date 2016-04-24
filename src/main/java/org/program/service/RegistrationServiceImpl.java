@@ -14,9 +14,9 @@ public class RegistrationServiceImpl implements RegistrationService {
 		this.registrationDAO = registrationDAO;
 	}
 
-	public boolean registrateAccount(String username, String password) {
+	public boolean registrateAccount(String username, String password,String role) {
 		
-		this.registrationDAO.createAccount(username, password);
+		this.registrationDAO.createAccount(username, password,role);
 		
 		
 		return false;

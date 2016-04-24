@@ -28,5 +28,11 @@ public class RegistrationValidation {
 					"matchingPassword.registration.password",
 					"Password and Confirm Password Not match.");
 		}
+		if(!(registration.getRole().equals("ROLE_ADMIN") || registration.getRole().equals("ROLE_USER")))
+				{
+			errors.rejectValue("role", "role","Nie ma takiej funkcji !");
+			
+				}
+	
 	}
 }
