@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -35,9 +36,17 @@
 			<img src="../images/biblio.jpg" alt="" width="720" height="160" />
 			
 		</div>
-		
 
-	<div style="text-align:right;margin-right:80px;"><a href="<c:url value="/logout" />">Wyloguj sie</a></div>
+
+	<div style="text-align:right;margin-right:80px;"><a href="<c:url value="/logout" />">Wyloguj sie</a>
+
+		<sec:authorize access="hasRole('ROLE_ADMIN')">
+		&nbsp;&nbsp;<a href="<c:url value="/admin_panel" />">PanelAdministratora</a>
+	</div>
+	</sec:authorize>
+	<sec:authorize access="hasRole('ROLE_USER')">
+</div>
+</sec:authorize>
 		<div id="navigation">
 
 			
