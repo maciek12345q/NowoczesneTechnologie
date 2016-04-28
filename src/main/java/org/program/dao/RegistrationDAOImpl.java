@@ -1,14 +1,15 @@
 package org.program.dao;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.annotation.Resource;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.*;
+import org.hibernate.criterion.Restrictions;
+import org.program.form.User;
 import org.program.model.Role;
 import org.program.model.Users;
 import org.springframework.stereotype.Repository;
@@ -53,6 +54,37 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 		session.close();
 		}
 		return error;
+	}
+
+	public void removeAccount(Long id)
+	{
+		List resultPom = null;
+		Session session = this.sessionFactory.openSession();
+		try
+		{
+
+			Transaction tx = session.beginTransaction();
+			Criteria cr = session.createCriteria(Users.class);
+			cr.add(Restrictions.eq("id", id));
+			resultPom = cr.list();
+			List<Users> result =new ArrayList<Users>();
+
+			for(int i=0;i<resultPom.size();i++)
+			{
+				result.add((Users)resultPom.get(i));
+				session.delete(result.get(i));
+			}
+			tx.commit();
+
+		}
+		catch(HibernateException ex)
+		{
+			System.out.println("Problem podczas przesyłania danych do bazy danych");
+
+		}
+		finally {
+			session.close();
+		}
 	}
 
 }

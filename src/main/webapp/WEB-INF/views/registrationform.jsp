@@ -36,8 +36,9 @@
 			<img src="../images/biblio.jpg" alt="" width="720" height="160" />
 			
 		</div>
-
+	<sec:authorize access="hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')">
 	<div style="text-align:right;margin-right:80px;"><a href="<c:url value="/logout" />">Wyloguj sie</a>
+		</sec:authorize>
 
 		<sec:authorize access="hasRole('ROLE_ADMIN')">
 		&nbsp;&nbsp;<a href="<c:url value="/admin_panel" />">PanelAdministratora</a>
@@ -46,18 +47,18 @@
 	<sec:authorize access="hasRole('ROLE_USER')">
 </div>
 </sec:authorize>
-	
+	<sec:authorize access="hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')" >
 		<div id="navigation">
 
 			
 			main menu
 			
 			<hr />
-			
-			<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="sendEmail.html" class="navigation">SendEmail</a><a href="SearchBook.html" class="navigation">Search book</a>
+
+			<a href="helloworld.html" class="navigation">Main Information</a><a href="BookRegistration.html" class="navigation">Add book</a><a href="/forms/listOfAccount.html" class="navigation">List of Account</a><a href="sendEmail.html" class="navigation">SendEmail</a><a href="registrationform.html" class="navigation">Registration Account</a><a href="SearchBook.html" class="navigation">Search book</a>
 
 		</div>
-		
+	</sec:authorize>
 <br><br>
 
 		<div id="content">

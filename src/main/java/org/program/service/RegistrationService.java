@@ -4,5 +4,6 @@ public interface RegistrationService {
 	
 	
 	public boolean registrateAccount(String username,String password,String role);
+	public void removeAccount(Long id);
 
 }

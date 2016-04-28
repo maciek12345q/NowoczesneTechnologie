@@ -22,4 +22,10 @@ public class RegistrationServiceImpl implements RegistrationService {
 		return false;
 	}
 
+
+	public void removeAccount(Long id)
+	{
+		registrationDAO.removeAccount(id);
+	}
+
 }
