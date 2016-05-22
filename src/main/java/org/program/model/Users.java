@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.CascadeType;
 
 @Entity
 @Table(name = "Users")
@@ -32,8 +33,8 @@ public class Users implements Serializable {
 	@OneToOne(fetch=FetchType.LAZY,mappedBy="users")
 	private Person person;
 
-	
-	 @ManyToOne(fetch=FetchType.LAZY)
+
+	 @ManyToOne(cascade = CascadeType.PERSIST)
 	 @JoinColumn(name="id_role")
 	    private Role role;
 

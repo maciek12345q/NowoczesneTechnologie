@@ -49,16 +49,24 @@ public class AdminPageController {
                                 @RequestParam(value = "wyslij", required = false) Integer wyslij,
                                 @RequestParam(value = "edytuj", required = false) Integer edytuj,
                                 @RequestParam(value="id",required = false)Long id) {
+        List<String> list = loginService.listOfAccount();
         if (usun == null && edytuj == null && wyslij == null) {
-            List<String> list = loginService.listOfAccount();
+
 
 
             model.put("lists", list);
             return "adminPage";
-        } else if(usun == 1){
+        } else if(usun !=null ){
             this.registrationService.removeAccount(id);
             return "adminPage";
         }
+        else if(edytuj  !=  null)
+        {
+        model.put("list",list);
+         return "editAccountPage";
+        }
+
+
         else
         {
             return "403";

@@ -51,33 +51,55 @@
 <br><br>
 
 <div id="content">
-<h1 style="text-align: center;">Panel Administratora</h1>
+  <h1 style="text-align: center;">Panel Administratora</h1>
 
-  <table class="table table-bordered">
-    <thead>
-    <tr>
-      <th>userName</th>
-      <th>userPassword</th>
-      <th>Type of user</th>
-      <th>Usun uzytkownika</th>
-      <th>Wyslij wiadomosc</th>
-      <th>Edytuj dane</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach var="list" items="${lists}" varStatus="status">
+  <form:form method="Post" action="registrationform.html"
+             commandName="registration">
+  <div class="form-group">
+    <table>
       <tr>
-        <td><c:out value="${list.userName}"/></td>
-        <td><c:out value="${list.userPassword}"/></td>
-        <td><c:out value="${list.role.role}"/></td>
-        <td><a href="/admin_panel?usun=1&id=${list.id}">Usun uzytkownika</a></td>
-        <td><a href="/admin_panel?wyslij=1&id=${list.id}">Wyslij wiadomosc</a></td>
-        <td><a href="/admin_panel?edytuj=1&id=${list.id}">Edytuj uzytkownika</a></td>
+        <td>User Name:<FONT color="red"><form:errors
+                path="userName" /></FONT></td>
       </tr>
-    </c:forEach>
-    </tbody>
-  </table>
-</div>
+      <tr>
+        <td><form:input path="userName" cssClass="form-control" value="${list.userName}" /></td>
+      </tr>
+
+      <tr>
+        <td>Password:<FONT color="red"><form:errors
+                path="password" /></FONT></td>
+      </tr>
+      <tr>
+        <td><form:password path="password" cssClass="form-control"  value="${list.userPassword}"/></td>
+      </tr>
+
+      <tr>
+        <td>Confirm Password:<FONT color="red"><form:errors
+                path="confirmPassword"  /></FONT></td>
+      </tr>
+      <tr>
+        <td><form:password path="confirmPassword" cssClass="form-control"  /></td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>Funkcja(administrator itp.):<FONT color="red"><form:errors path="role" /></FONT></td>
+      </tr>
+      <tr>
+        <td><form:input path="role" cssClass="form-control" value="${list.role.role}" /></td>
+      </tr>
+
+
+
+      <tr>
+        <td><input type="submit" value="Submit" cssClass="btn btn-default" /></td>
+      </tr>
+    </table>
+    <div class="form-group">
+      </form:form>
+    </div>
 
 
 <div id="footer">
